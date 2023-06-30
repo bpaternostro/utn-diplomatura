@@ -1,0 +1,47 @@
+/* COMENTARIO CSS */
+/* CSS = CASCADE STYLE SHEET */
+/* 
+Cuando hablamos de cascada ... viene de que siempre se queda con la ultima asignación
+La cascada tb influye en el llamado de los archivos CSS
+*/
+h1{
+    color:rebeccapurple;
+}
+
+/* selector de clase -> class */
+/* px --> pixel --> valor universal de unidad */
+.caja{ 
+    width: 200px;
+    height: 200px;
+    background: green;
+    margin-bottom: 50px; /* del borde hacia afuera */
+}
+
+/* selector unico -> ID */
+/* No es buena practica usar IDs. 
+Es mala practica repetir un objeto con ID en el mismo html */
+#subtitulo{
+    font-size: 16px;
+    color: blueviolet;
+}
+
+/* IMPORTANT 
+es mala practica -> no se puede usar mas de 3 veces en una pagina */
+.link{
+    color: blueviolet !important;
+}
+
+/* propiedades heredables en CSS 
+color, border*/
+.container{
+    width: 400px;
+    height: 200px;
+    background-color: black;
+    border-radius: 10px;
+    color: white; /* hereda al h2 */
+
+}
+
+.container h2{ /* con esto sumamos los valores de jerarquia -> queda reflejado en el Simplicity */
+    color: white;
+}

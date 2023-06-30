@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
+
+/*selector universal*/
+*{
+    font-family: 'Poppins', sans-serif; /*si no encuentra poppins -> aplica sans-serif*/
+}
+
+.title{
+    color:grey;
+    font-size: 42px;
+    font-family: sans-serif;/* se recomienda usar serif*/
+    text-align: center;
+    margin: o auto; /* para centrar de manera artesanal*/
+}
+
+/*Box modeling*/
+/* 
+el margin 
+border (contenido adyacente -> contenido externo) 
+padding le suma al width y el height del objecto
+*/
+.caja{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(65, 7, 119, 0.5);
+    border: greenyellow 2px solid; /* solid | inline | outset | dotted */
+    border-right: blue 10px dotted;
+    border-radius: 30px;
+    margin-left: 30px; /* IMPORTANTE: espacio del borde hacia afuera */
+    padding-left: 30px;
+    padding-top: 30px; 
+}
+
+.caja-padre{
+    width: 300px;
+    height: 300px;
+    background-color: blueviolet;
+    /*margin: 50px;  aplica a todos los margenes left | right | top | bottom */
+    /*margin: 50px 80px;  aplica un margen horizontal y vertical -> esto es super usado */
+    margin: 50px 80px 300px 150px;  /*aplica un margen en sentido horario */
+    padding-top: 50px; /* aplica un espacio interno -> entre el borde y el contenido */
+}
+
+.pantalla{
+    height: 100vh; /* 100vh = una pantalla*/
+    background-color: aqua;
+}
+
+.pantalla div{ /* los divs son elementos en bloque */
+    width: 200px;
+    background-color: blueviolet;
+}
+
+.pantalla span{ /* span ocupa unicamente el contenido, sus dimensiones dependen de lo que tengam dentro */
+    display: inline-block; /* toma lo mejor de inline y de block -> permite definir a un inline (span) width y height*/
+    text-align: center; /* permite alinear en el centro los objetos ... por el inline-block --> esto hace que los objetos sean tratados como texto*/
+    /*display: block;  con esto logramos que se comporte como un DIV */
+    width: 100px; /* no le da bola | los elementos en linea no pueden recibir ancho */
+    height: 200px; /* no le da bola | los elementos en linea no pueden recibir ancho */
+    background-color: blue;
+    font-weight: 300; /* cambiar el ancho de las palabras --> se usa para jerarquias (peso de las fuentes) en el mundo del diseño*/
+    -webkit-text-stroke: 1px green; /* le da un borde a la fuente --> param1: tamaño, param2: color */
+    color: transparent; /* con el stroke queda bueno, si lo ponemos delante de un video se ve */
+    overflow: hidden; /*desborde de las palabras, puede ser hidden | scroll */
+    overflow-x: scroll; /*unicamente scroll horizontal */
+}
+
+.pantalla .especial{
+    overflow-y: visible;
+    word-break: break-all; /* permite q cada palabra se pueda partir */
+    word-spacing: 5px; /* espacio entre las palabras */
+    letter-spacing: 5px; /* espacio entre letras */
+}
+
+/* Hover es un Pseudo elemento: evento que se ejecuta cuando estoy sobre un elementos */
+.pantalla .especial:hover{ /*en este caso esta aplicado sobre .especial */
+    background-color: aqua;
+    cursor: pointer; /* defino que tipo de cursos quiero, puede ser: pointer | wait |  */
+}
+
+
+/* 
+IMPORTANTE: los elementos en linea 
+    - se ubican 1 al lado del otro
+    - no reciben ni ancho ni alto 
+
+IMPORTANTE: Los elementos en bloque
+    - toman margin, width, height (esto es lo bueno)
+
+*/
+
+/* para usar fuentes externas: Google fonts */
