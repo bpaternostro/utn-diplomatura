@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter",sans-serif;
+    text-decoration: none;
+}
+
+a{
+    color: black;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+    height: 60px;
+}
+
+header div{
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+header div span{
+    margin: 10px;
+}
+
+.your-brand{
+    font-weight: 800;
+    font-size: 9px;
+    color: #005ce6;
+    letter-spacing: -1px;
+    
+}
+
+header div:nth-child(1){
+    justify-content: start;
+    font-size: 10px;
+}
+
+header div:nth-child(2){
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+
+header div:nth-child(2) nav{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header div:nth-child(2) nav a{
+    font-weight: 500;
+    font-size: 14px;
+    padding: 0 5px;
+    width: 70px;
+} 
+
+header > div:nth-child(1) > span:nth-child(2) > span{
+    margin:5px;
+}
+
+header > div:nth-child(1) > span:nth-child(2) > span:nth-child(1){
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: 7px;
+    text-align: center;
+    padding: 5px;
+}
+
+header > div:nth-child(1) > span:nth-child(2) > span:nth-child(2){
+    font-size: 12px;
+}
+
+header > div:nth-child(2) > nav > span{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 60%;
+}
+
+header > div:nth-child(2) > nav > span:nth-child(1){
+    border-right: 1px solid lightgray;
+}
+
+header > div:nth-child(1) > span:nth-child(2) > span:nth-child(1) > a > span{
+    margin:0px;
+}
+
+header > div:nth-child(1) > span:nth-child(2) > span:nth-child(2) > span{
+    margin:0px;
+}
+
+header > div:nth-child(1) > span:nth-child(2){
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.blackie{
+    font-weight: 600;
+}
+
+
+body > header > div:nth-child(1) > span:nth-child(2) > span:nth-child(2) > a{
+    color: blue;
+}
+
+
+.go-pro{
+    color: #FF0096;
+}
+
+.button-site{
+    border-radius: 10px;
+    border: 1px transparent;
+    background-color: #005ce6;
+    color: #FFF;
+    font-weight: 700;
+    text-align: center;
+    height: 35px;
+    padding: 10px;
+    margin: 5px;
+}
+
+header > div:nth-child(1) > span:nth-child(1) > img{
+    width: 110px;
+}

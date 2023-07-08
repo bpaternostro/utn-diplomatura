@@ -1,0 +1,61 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+h1{
+    text-align: center;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 5vw; /* param1=vertical param2=horizontal*/
+    background-color: aquamarine;
+
+}
+
+header .brand-navbar{
+    height: 100%;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    width: 200px;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+header .buttons-navbar{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 250px;
+}
+
+nav{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    gap:30px; /*espacio entre los hijos*/
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    width: 200px;
+}
+
+header .buttons-navbar button{
+    background-color: blueviolet;
+    color:azure;
+    margin: 2px;
+    padding: 5px;
+    border: 0;
+    border-radius: 4px;
+}

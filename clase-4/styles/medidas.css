@@ -1,0 +1,114 @@
+*{  
+    /* normalizar, es distinto a resetear 
+        https://www.geeksforgeeks.org/difference-between-resetting-and-normalizing-in-css/
+    */
+    /* aca normalizamos todos los valores pode defecto. LLama a todos los elementos del html */
+    margin:0; /* normalizamos todos los margenes de la pagina */
+    padding: 0; /*quito el espacio en las listas */
+    box-sizing: border-box; /* el tamaño del borde se calcula en relación al padre, puede ser: border-box, context-box */
+    color: black;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+html{ /* hace referencia unicamente al contenedor html */
+    font-size: 20px; /* aca cambioamos los defaults del html (es 16px) */
+}
+
+.parrafo-container{
+    width: 50vw; /* vw => ancho de la pantalla -> es porcentual */
+    height: 50vh; /* vh => alto de la pantalla -> es porcentual */
+    font-size: 20px;background-color: aquamarine;
+}
+
+.parrafo{
+    /*Definir el tamaño de la letra por %*/
+    font-size: 200%;  /*por defecto viene el html con font-size en 16px --> entonces va a ser 8px --> NO SE USA MUCHO*/
+}
+
+.text{
+    /*Definir el tamaño de la letra por rem*/
+    /*1 rem = font-size del html.*/
+    font-size: 4rem; /* so = 60px --> se usa mucho por la parte responsive */
+}
+
+.parrafo:nth-child(1){
+    /*Definir el tamaño de la letra por em*/
+    /*1 em = font-size del container.*/
+    font-size: 2em; /* so = 60px --> se usa mucho por la parte responsive */
+}
+
+.parrafo:nth-child(2){
+    /*Definir el tamaño de la letra por em*/
+    /*1 em = font-size del container.*/
+    font-size: 4em; /* so = 60px --> se usa mucho por la parte responsive */
+}
+
+header{
+    background-color: black;
+    padding: 2vh 5vw;
+
+}
+
+header img{
+    width: 15px;
+    display: inline-block;
+}
+
+header h2{
+    font-size: 20px;
+    display: inline-block;
+    color: white;
+}
+
+header nav a{
+    color: white;
+}
+
+header nav{
+    display: inline-block;
+}
+
+.padre{
+    width: 100%;
+    height: 100vh;
+    border: 1px black solid;
+    padding: 300px 0; /* para centrarlo de manera vertical medio cabeza */
+}
+
+.caja{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: blueviolet;
+    margin: 0 auto; /* centra horizontalmente automaticamente | el primer valor define alto y ancho*/
+    /*
+        ver neumorphism.io --> para hacer sombras
+        param1 -> movimiento de la sombra eje x (positivo -> , negativo <-)
+        param2 -> movimiento de la sombra eje y (positivo va hacia abajo, negativo va hacia arriba)
+        param3 -> difuminado de la sombra
+        param4 -> base (tamaño) de la sombra
+        param5 -> color de la sombra
+        Apartir de aca segunda sombra
+        param6 -> mov en x
+        param7 -> mov en y
+        etc
+    */
+    box-shadow: 100px 90px 2px 3px rgb(106, 68, 68), 
+                    -100px -80px 3px  rgb(147, 33, 33), /*segunda sombra*/
+                        inset 20px 30px 2px black; /*sombra interna*/
+}
+
+.caja:hover{
+    box-shadow: 0px 0px 0 black,
+                    0px 0px 0 black,
+                    inset 0px 0px 0px black;
+    /* va de un punto A a un punto B
+        param1 -> tiempo que demora en ejecutar la animación
+        param2 -> tipo de animación (tipo de corbatura)
+            - puede ser: linear | ease | ease-in | ease-out | ease-in-out;
+            - como se va a ejectar desde el punto A a punto B
+    */
+    transition: .75s ease-in-out; /*750ms (milisegundos)*/
+    background-color: brown;
+}

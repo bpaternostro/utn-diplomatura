@@ -1,0 +1,37 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+h1{
+    text-align: center;
+}
+
+.padre{
+    background-color: greenyellow;
+    height: 100vh;
+    display: flex; /* por default va en row como direction*/
+    /*flex-direction: column; Nos permite elegir en que direccion ponemos nuestro elemento (en que eje)*/
+    flex-direction: row; /*Nos permite elegir en que direccion ponemos nuestro elemento (en que eje)*/
+    /*flex-direction: reverse; invierte los ejes*/
+    /* cuando flex-direction = row --> justify-content maneja el eje X y align-items maneja el eje Y*/
+    /* cuando flex-direction = column --> justify-content maneja el eje Y y align-items maneja el eje X*/
+    justify-content: center; /*dependiendo del tipo de direction acomoda los objectos en el medio */
+    justify-content:space-between; /*pone un espacio entre cada hijo*/
+    justify-content:space-around; /*pone un espacio entre cada hijo y la mitad de este espacio al inicio*/
+    justify-content:space-evenly; /*espacia parejo*/
+    /*puede ser start | center | end*/
+    align-items: center; /*centra en el eje * dependiendo del tipo de direction acomoda los objectos en el medio flex-direction*/
+    
+   
+    
+}
+
+.hijo{
+    width: 200px;
+    height: 200px;
+    border: 1px solid;
+    background-color: azure;
+}
